@@ -8,6 +8,13 @@ import { AdminHomeComponent } from './modules/admin/admin-home/admin-home.compon
 import { AdminAppointmentComponent } from './modules/admin/admin-appointment/admin-appointment.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AdminDoctorComponent } from './modules/admin/admin-doctor/admin-doctor.component';
+import { AdminPatientComponent } from './modules/admin/admin-patient/admin-patient.component';
+import { AdminPaymentComponent } from './modules/admin/admin-payment/admin-payment.component';
+import { AdminDepartmentComponent } from './modules/admin/admin-department/admin-department.component';
+import { AdminFeedbackComponent } from './modules/admin/admin-feedback/admin-feedback.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +22,18 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     AdminHomeComponent,
     AdminAppointmentComponent,
     NotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminDoctorComponent,
+    AdminPatientComponent,
+    AdminPaymentComponent,
+    AdminDepartmentComponent,
+    AdminFeedbackComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CanvasJSAngularChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+<div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+        <form class="flex flex-col md:flex-row gap-3">
+            
+            <div class="flex">
+                <input type="text" placeholder="Search for the tool you like"
+                    class="w-full md:w-80 px-3 h-10 rounded-l border-2 border-sky-500 focus:outline-none focus:border-sky-500"
+                    >
+                <button type="submit" class="bg-sky-500 text-white rounded-r px-2 md:px-3 py-0 md:py-1">Search</button>
+            </div>
+            <select id="pricingType" name="pricingType"
+                class="w-full h-10 border-2 border-sky-500 focus:outline-none focus:border-sky-500 text-sky-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
+                <option value="All" selected="">All</option>
+                <option value="Freemium">Freemium</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="w-4 h-4 mr-3 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                    <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/>
+                  </svg>
+                Ekle
+                </button>
+        </form>
+
+        <div class="grid grid-cols-4 gap-4 mt-4">
+
+            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex justify-end px-4 pt-4">
+                    <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                        <span class="sr-only">Open dropdown</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                            <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2" aria-labelledby="dropdownButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Güncelle</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">PDF İndir</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sil</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center pb-10">
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Bonnie image"/>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Fizik Tedavi</span>
+                    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
+                    
+                    <span class="text-sm mt-3 mb-1 text-gray-900 dark:text-gray-400">+90 (555) 666 77 88</span>
+                    <span class="text-sm mt-3 mb-1 text-gray-900 dark:text-gray-400">İstanbul / Türkiye</span>
+                </div>
+            </div>
+
+        </div>
+
+        
+        
+        
+
+    </div>
+  </div>
