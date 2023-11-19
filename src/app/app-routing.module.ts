@@ -8,6 +8,7 @@ import { AdminPatientComponent } from './modules/admin/admin-patient/admin-patie
 import { AdminPaymentComponent } from './modules/admin/admin-payment/admin-payment.component';
 import { AdminDepartmentComponent } from './modules/admin/admin-department/admin-department.component';
 import { AdminFeedbackComponent } from './modules/admin/admin-feedback/admin-feedback.component';
+import { AdminSimulatorComponent } from './modules/admin/admin-simulator/admin-simulator.component';
 
 const routes: Routes = [
   {path: 'adminhome', component: AdminHomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'adminpayment', component: AdminPaymentComponent},
   {path: 'admindepartment', component: AdminDepartmentComponent},
   {path: 'adminfeedback', component: AdminFeedbackComponent},
+  {path: 'adminsimulator', component: AdminSimulatorComponent},
 
   {path: '**', component: NotFoundComponent}
 

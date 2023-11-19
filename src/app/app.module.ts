@@ -14,6 +14,7 @@ import { AdminPaymentComponent } from './modules/admin/admin-payment/admin-payme
 import { AdminDepartmentComponent } from './modules/admin/admin-department/admin-department.component';
 import { AdminFeedbackComponent } from './modules/admin/admin-feedback/admin-feedback.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { AdminSimulatorComponent } from './modules/admin/admin-simulator/admin-simulator.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     AdminPaymentComponent,
     AdminDepartmentComponent,
     AdminFeedbackComponent,
+    AdminSimulatorComponent,
   ],
   imports: [
     BrowserModule,
