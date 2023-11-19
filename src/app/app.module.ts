@@ -15,7 +15,16 @@ import { AdminDepartmentComponent } from './modules/admin/admin-department/admin
 import { AdminFeedbackComponent } from './modules/admin/admin-feedback/admin-feedback.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { AdminSimulatorComponent } from './modules/admin/admin-simulator/admin-simulator.component';
-
+import { AdminNewDoctorComponent } from './modules/admin/admin-new-doctor/admin-new-doctor.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { LoginComponent } from './modules/login/login.component';
+import { DoctorAppointmentComponent } from './modules/doctor/doctor-appointment/doctor-appointment.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DoctorPaymentComponent } from './modules/doctor/doctor-payment/doctor-payment.component';
+import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/doctor-new-payment.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +39,23 @@ import { AdminSimulatorComponent } from './modules/admin/admin-simulator/admin-s
     AdminDepartmentComponent,
     AdminFeedbackComponent,
     AdminSimulatorComponent,
+    AdminNewDoctorComponent,
+    LoginComponent,
+    DoctorAppointmentComponent,
+    DoctorPaymentComponent,
+    DoctorNewPaymentComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

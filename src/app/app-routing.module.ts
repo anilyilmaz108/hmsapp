@@ -9,6 +9,11 @@ import { AdminPaymentComponent } from './modules/admin/admin-payment/admin-payme
 import { AdminDepartmentComponent } from './modules/admin/admin-department/admin-department.component';
 import { AdminFeedbackComponent } from './modules/admin/admin-feedback/admin-feedback.component';
 import { AdminSimulatorComponent } from './modules/admin/admin-simulator/admin-simulator.component';
+import { AdminNewDoctorComponent } from './modules/admin/admin-new-doctor/admin-new-doctor.component';
+import { LoginComponent } from './modules/login/login.component';
+import { DoctorAppointmentComponent } from './modules/doctor/doctor-appointment/doctor-appointment.component';
+import { DoctorPaymentComponent } from './modules/doctor/doctor-payment/doctor-payment.component';
+import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/doctor-new-payment.component';
 
 const routes: Routes = [
   {path: 'adminhome', component: AdminHomeComponent},
@@ -19,6 +24,12 @@ const routes: Routes = [
   {path: 'admindepartment', component: AdminDepartmentComponent},
   {path: 'adminfeedback', component: AdminFeedbackComponent},
   {path: 'adminsimulator', component: AdminSimulatorComponent},
+  {path: 'adminnewdoctor', component: AdminNewDoctorComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'doctorappointment', component: DoctorAppointmentComponent},
+  {path: 'doctorpayment', component: DoctorPaymentComponent},
+  {path: 'doctornewpayment', component: DoctorNewPaymentComponent},
+
 
   {path: '**', component: NotFoundComponent}
 

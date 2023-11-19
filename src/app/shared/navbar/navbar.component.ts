@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-navbar',
@@ -12,4 +13,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     initFlowbite();
   }
+
+  role = AppComponent.role;
 }

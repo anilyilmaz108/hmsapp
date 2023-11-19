@@ -12,4 +12,5 @@ export class AppComponent implements OnInit {
     
   }
   title = 'hmsapp';
+  static role = 'user';
 }
