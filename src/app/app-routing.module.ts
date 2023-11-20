@@ -14,8 +14,10 @@ import { LoginComponent } from './modules/login/login.component';
 import { DoctorAppointmentComponent } from './modules/doctor/doctor-appointment/doctor-appointment.component';
 import { DoctorPaymentComponent } from './modules/doctor/doctor-payment/doctor-payment.component';
 import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/doctor-new-payment.component';
+import { UserHomeComponent } from './modules/user/user-home/user-home.component';
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/userhome', pathMatch: 'full' },
   {path: 'adminhome', component: AdminHomeComponent},
   {path: 'adminappointment', component: AdminAppointmentComponent},
   {path: 'admindoctor', component: AdminDoctorComponent},
@@ -29,6 +31,8 @@ const routes: Routes = [
   {path: 'doctorappointment', component: DoctorAppointmentComponent},
   {path: 'doctorpayment', component: DoctorPaymentComponent},
   {path: 'doctornewpayment', component: DoctorNewPaymentComponent},
+  {path: 'userhome', component: UserHomeComponent},
+
 
 
   {path: '**', component: NotFoundComponent}

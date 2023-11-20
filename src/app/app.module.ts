@@ -25,6 +25,9 @@ import { DoctorAppointmentComponent } from './modules/doctor/doctor-appointment/
 import { ReactiveFormsModule } from '@angular/forms';
 import { DoctorPaymentComponent } from './modules/doctor/doctor-payment/doctor-payment.component';
 import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/doctor-new-payment.component';
+import { UserHomeComponent } from './modules/user/user-home/user-home.component';
+import { NavbarUserComponent } from './shared/navbar-user/navbar-user.component';
+import { FooterUserComponent } from './shared/footer-user/footer-user.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/d
     DoctorAppointmentComponent,
     DoctorPaymentComponent,
     DoctorNewPaymentComponent,
+    UserHomeComponent,
+    NavbarUserComponent,
+    FooterUserComponent,
     
   ],
   imports: [
