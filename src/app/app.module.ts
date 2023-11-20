@@ -28,6 +28,11 @@ import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/d
 import { UserHomeComponent } from './modules/user/user-home/user-home.component';
 import { NavbarUserComponent } from './shared/navbar-user/navbar-user.component';
 import { FooterUserComponent } from './shared/footer-user/footer-user.component';
+import { UserAboutComponent } from './modules/user/user-about/user-about.component';
+import { UserStaffComponent } from './modules/user/user-staff/user-staff.component';
+import { UserDepartmentComponent } from './modules/user/user-department/user-department.component';
+import { UserAppointmentComponent } from './modules/user/user-appointment/user-appointment.component';
+import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedback.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,11 @@ import { FooterUserComponent } from './shared/footer-user/footer-user.component'
     UserHomeComponent,
     NavbarUserComponent,
     FooterUserComponent,
+    UserAboutComponent,
+    UserStaffComponent,
+    UserDepartmentComponent,
+    UserAppointmentComponent,
+    UserFeedbackComponent,
     
   ],
   imports: [

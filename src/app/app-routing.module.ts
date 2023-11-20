@@ -15,9 +15,14 @@ import { DoctorAppointmentComponent } from './modules/doctor/doctor-appointment/
 import { DoctorPaymentComponent } from './modules/doctor/doctor-payment/doctor-payment.component';
 import { DoctorNewPaymentComponent } from './modules/doctor/doctor-new-payment/doctor-new-payment.component';
 import { UserHomeComponent } from './modules/user/user-home/user-home.component';
+import { UserAboutComponent } from './modules/user/user-about/user-about.component';
+import { UserStaffComponent } from './modules/user/user-staff/user-staff.component';
+import { UserDepartmentComponent } from './modules/user/user-department/user-department.component';
+import { UserAppointmentComponent } from './modules/user/user-appointment/user-appointment.component';
+import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedback.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/userhome', pathMatch: 'full' },
+  {path: '',   redirectTo: '/userhome', pathMatch: 'full'},
   {path: 'adminhome', component: AdminHomeComponent},
   {path: 'adminappointment', component: AdminAppointmentComponent},
   {path: 'admindoctor', component: AdminDoctorComponent},
@@ -32,6 +37,13 @@ const routes: Routes = [
   {path: 'doctorpayment', component: DoctorPaymentComponent},
   {path: 'doctornewpayment', component: DoctorNewPaymentComponent},
   {path: 'userhome', component: UserHomeComponent},
+  {path: 'userabout', component: UserAboutComponent},
+  {path: 'userstaff', component: UserStaffComponent},
+  {path: 'userdepartment', component: UserDepartmentComponent},
+  {path: 'userappointment', component: UserAppointmentComponent},
+  {path: 'userfeedback', component: UserFeedbackComponent},
+
+
 
 
 
