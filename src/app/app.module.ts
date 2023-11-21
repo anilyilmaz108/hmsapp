@@ -33,6 +33,7 @@ import { UserStaffComponent } from './modules/user/user-staff/user-staff.compone
 import { UserDepartmentComponent } from './modules/user/user-department/user-department.component';
 import { UserAppointmentComponent } from './modules/user/user-appointment/user-appointment.component';
 import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedback.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedbac
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CanvasJSAngularChartsModule,
