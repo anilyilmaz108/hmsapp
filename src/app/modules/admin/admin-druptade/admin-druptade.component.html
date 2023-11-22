@@ -2,8 +2,9 @@
 <div class="p-4 mt-16 sm:ml-64">
     <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
    
-  
-        <form [formGroup]="addDoctorForm">
+        <h2 class="text-base font-semibold leading-7 text-gray-900">Güncelle</h2>
+
+        <form [formGroup]="updateDoctorForm">
             <div class="space-y-12">
               <div class="border-b border-gray-900/10 pb-12">
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Profile</h2>
@@ -172,7 +173,7 @@
             <div class="mt-6 flex items-center justify-end gap-x-6">
              
               <button type="button" class="text-sm font-semibold leading-6 text-gray-900">İptal</button>
-              <button [disabled]="addDoctorForm.invalid" type="submit" (click)="onSubmit()" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Kaydet</button>
+              <button [disabled]="updateDoctorForm.invalid" type="submit" (click)="onSubmit()" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Güncelle</button>
             </div>
           </form>
        

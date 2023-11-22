@@ -20,6 +20,8 @@ import { UserStaffComponent } from './modules/user/user-staff/user-staff.compone
 import { UserDepartmentComponent } from './modules/user/user-department/user-department.component';
 import { UserAppointmentComponent } from './modules/user/user-appointment/user-appointment.component';
 import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedback.component';
+import { AdminDoctorUpdateComponent } from './modules/admin/admin-doctor-update/admin-doctor-update.component';
+import { AdminDruptadeComponent } from './modules/admin/admin-druptade/admin-druptade.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/userhome', pathMatch: 'full'},
@@ -42,6 +44,8 @@ const routes: Routes = [
   {path: 'userdepartment', component: UserDepartmentComponent},
   {path: 'userappointment', component: UserAppointmentComponent},
   {path: 'userfeedback', component: UserFeedbackComponent},
+  {path: 'admindoctorupdate', component: AdminDoctorUpdateComponent},
+  {path: 'admindrupdate', component: AdminDruptadeComponent},
 
 
 

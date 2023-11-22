@@ -34,6 +34,8 @@ import { UserDepartmentComponent } from './modules/user/user-department/user-dep
 import { UserAppointmentComponent } from './modules/user/user-appointment/user-appointment.component';
 import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedback.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminDoctorUpdateComponent } from './modules/admin/admin-doctor-update/admin-doctor-update.component';
+import { AdminDruptadeComponent } from './modules/admin/admin-druptade/admin-druptade.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserDepartmentComponent,
     UserAppointmentComponent,
     UserFeedbackComponent,
+    AdminDoctorUpdateComponent,
+    AdminDruptadeComponent,
     
   ],
   imports: [

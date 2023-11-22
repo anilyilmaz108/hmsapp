@@ -1,30 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatNativeDateModule} from '@angular/material/core';
+
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
-import { AdminDoctorComponent } from '../admin-doctor/admin-doctor.component';
 
 @Component({
-  selector: 'app-admin-new-doctor',
-  templateUrl: './admin-new-doctor.component.html',
-  styleUrls: ['./admin-new-doctor.component.css'],
-  
+  selector: 'app-admin-doctor-update',
+  templateUrl: './admin-doctor-update.component.html',
+  styleUrls: ['./admin-doctor-update.component.css']
 })
-export class AdminNewDoctorComponent implements OnInit{
+export class AdminDoctorUpdateComponent implements OnInit {
   user: User = new User();
-  eUser: User = AdminDoctorComponent.eUser;
 
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, public updateUser: User){}
   ngOnInit(): void {
     initFlowbite();
   }
 
-  addDoctorForm = new FormGroup({
+/*  updateDoctorForm = new FormGroup({
     role: new FormControl(null,[Validators.required]),
     about: new FormControl(null,[Validators.required]),
     image: new FormControl(null,[Validators.required]),
@@ -37,10 +31,10 @@ export class AdminNewDoctorComponent implements OnInit{
     date: new FormControl(null,[Validators.required]),
     address: new FormControl(null,[Validators.required]),
     staff: new FormControl(null,[Validators.required]),
-  })
+  }) */
 
   updateDoctorForm = new FormGroup({
-    role: new FormControl(`${AdminDoctorComponent.eUser}`,[Validators.required]),
+    role: new FormControl(null,[Validators.required]),
     about: new FormControl(null,[Validators.required]),
     image: new FormControl(null,[Validators.required]),
     name: new FormControl(null,[Validators.required]),
@@ -57,32 +51,6 @@ export class AdminNewDoctorComponent implements OnInit{
 
 
   onSubmit(){
-    console.log('Submitted');
-    this.user = Object.assign(this.user, this.addDoctorForm.value);
-    const body = { 
-      "role":`${this.addDoctorForm.controls['role'].value}`,
-      "name":`${this.addDoctorForm.controls['name'].value}`,
-      "surname":`${this.addDoctorForm.controls['surname'].value}`,
-      "about":`${this.addDoctorForm.controls['about'].value}`,
-      "image":`${this.addDoctorForm.controls['image'].value}`,
-      "email":`${this.addDoctorForm.controls['email'].value}`,
-      "phone":`${this.addDoctorForm.controls['phone'].value}`,
-      "department":`${this.addDoctorForm.controls['department'].value}`,
-      "salary":`${this.addDoctorForm.controls['salary'].value}`,
-      "started":`${this.addDoctorForm.controls['role'].value}`,
-      "address":`${this.addDoctorForm.controls['address'].value}`,
-      "staff":`${this.addDoctorForm.controls['staff'].value}`,
-     };
-
-    this.userService.addUser(this.user).subscribe(data => console.log(data), error => console.log(error));
-    console.log(this.user);
-    console.log(typeof(this.user));
- 
-
-  }
-
-
-  onUpdateSubmit(){
     console.log('Submitted');
     
     this.user = Object.assign(this.user, this.updateDoctorForm.value);
@@ -104,10 +72,6 @@ export class AdminNewDoctorComponent implements OnInit{
     this.userService.updateUser(this.user, 1).subscribe(data => console.log(data), error => console.log(error));
     //console.log(this.user);
     //console.log(typeof(this.user));
-
-    this.user = new User();
-    console.log(this.user);
+ 
   }
 }
-
-   
