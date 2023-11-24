@@ -3,6 +3,11 @@ const app = express();
 var cors = require("cors");
 port = 3306;
 const db = require('./queries')
+//Swagger Integration
+var swaggerUi = require('swagger-ui-express');
+    
+swaggerDocument = require('./swagger.json');
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(cors());
 
