@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
 import { Payment } from 'src/app/models/payment';
 import { PaymentService } from 'src/app/services/payment.service';
+import {MatSnackBar, MatSnackBarRef, MatSnackBarModule} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-doctor-new-payment',
@@ -11,7 +12,7 @@ import { PaymentService } from 'src/app/services/payment.service';
 })
 export class DoctorNewPaymentComponent implements OnInit{
   payment: Payment = new Payment();
-  constructor(private paymentService: PaymentService){}
+  constructor(private paymentService: PaymentService, private _snackBar: MatSnackBar){}
   ngOnInit(): void {
     initFlowbite();
   }
@@ -36,6 +37,8 @@ export class DoctorNewPaymentComponent implements OnInit{
     console.log(this.payment);
     console.log(typeof(this.payment));
  
-
+    this._snackBar.open("İşleminiz Gerçekleşmiştir","Tamam", {
+      duration: 3000
+    });
   }
 }

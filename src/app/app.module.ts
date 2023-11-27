@@ -36,6 +36,7 @@ import { UserFeedbackComponent } from './modules/user/user-feedback/user-feedbac
 import { HttpClientModule } from '@angular/common/http';
 import { AdminDoctorUpdateComponent } from './modules/admin/admin-doctor-update/admin-doctor-update.component';
 import { AdminDruptadeComponent } from './modules/admin/admin-druptade/admin-druptade.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { AdminDruptadeComponent } from './modules/admin/admin-druptade/admin-dru
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
 import { Appointment } from 'src/app/models/appointment';
 import { AppointmentService } from 'src/app/services/appointment.service';
+import {MatSnackBar, MatSnackBarRef, MatSnackBarModule} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-appointment',
@@ -12,7 +13,7 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 export class UserAppointmentComponent implements OnInit{
   appointment: Appointment = new Appointment();
 
-  constructor(private appointmentService: AppointmentService){}
+  constructor(private appointmentService: AppointmentService, private _snackBar: MatSnackBar){}
   ngOnInit(): void {
     initFlowbite();
   }
@@ -40,7 +41,9 @@ export class UserAppointmentComponent implements OnInit{
     this.appointmentService.addAppointment(this.appointment).subscribe(data => console.log(data), error => console.log(error));
     console.log(this.appointment);
     console.log(typeof(this.appointment));
- 
+    this._snackBar.open("İşleminiz Gerçekleşmiştir","Tamam", {
+      duration: 3000
+    });
 
   }
 }

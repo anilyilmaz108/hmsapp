@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { Appointment } from 'src/app/models/appointment';
 import { AppointmentService } from 'src/app/services/appointment.service';
+import {MatSnackBar, MatSnackBarRef, MatSnackBarModule} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-admin-appointment',
@@ -11,7 +12,7 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 export class AdminAppointmentComponent implements OnInit{
   appointments!: Appointment[];
 
-  constructor(private appointmentService: AppointmentService){}
+  constructor(private appointmentService: AppointmentService, private _snackBar: MatSnackBar){}
   ngOnInit(): void {
     initFlowbite();
     this.appointmentService.getAppointments().subscribe(data => {
@@ -54,5 +55,11 @@ export class AdminAppointmentComponent implements OnInit{
     this.appointmentService.deleteAppointment(id).subscribe(data => {
       console.log(data);
       console.log('SILINDI');
-    })  }
+
+      this._snackBar.open("İşleminiz Gerçekleşmiştir","Tamam", {
+        duration: 3000
+      });
+    })
+    
+    }
 }

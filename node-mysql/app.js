@@ -1,8 +1,43 @@
 const express = require('express');
 const app = express();
+const redis = require("redis"); //redis must be working on background
+const client = redis.createClient(); //redis must be working on background
 var cors = require("cors");
-port = 3306;
+port = 3307; //Docker -> 3306 Redis -> 3307
 const db = require('./queries')
+
+//Redis -> Working on 127.0.0.1:6379
+client.on("error",error => {
+    console.error(error);
+});
+
+
+//Redis SET - GET
+//Token İşlemleri için Kullanılabilir..
+async function redisSetValue() {
+    await client.connect()
+    await client.set('token', 'co8ItzHSqq1uwAfrg4BAVLSTscgQqUTopzVJjBaT8Gos3ih52y24lY5VxGqVPCUt', {EX: 60 * 60 * 24}, function(err, success) {
+        console.log("Success Operation", success); //Bir gün süreli token
+    });
+    const value = await client.get('token');
+    console.log(value); 
+  }
+  redisSetValue();
+
+
+//Redis HSET - HGET
+//User - Appointment - Feedback - Payment bilgileri obje olarak Cache'de tutulabilir..
+async function redisHSetValue() {
+    //await client.connect()
+    await client.hSet('user','name','test1', function(err, success) {
+        console.log("Success Operation", success);
+    });
+    const value = await client.hGet('user','name');
+    console.log(value); 
+  }
+  //redisHSetValue();
+
+
 //Swagger Integration
 var swaggerUi = require('swagger-ui-express');
     
@@ -12,7 +47,7 @@ app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(cors());
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3306");
+    res.setHeader("Access-Control-Allow-Origin", ["http://localhost:3306","http://localhost:3307"]);
     res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     next();

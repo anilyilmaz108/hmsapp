@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
 import { AdminDoctorComponent } from '../admin-doctor/admin-doctor.component';
+import {MatSnackBar, MatSnackBarRef, MatSnackBarModule} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-admin-new-doctor',
@@ -19,7 +20,7 @@ export class AdminNewDoctorComponent implements OnInit{
   user: User = new User();
   eUser: User = AdminDoctorComponent.eUser;
 
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private _snackBar: MatSnackBar){}
   ngOnInit(): void {
     initFlowbite();
   }
@@ -77,7 +78,9 @@ export class AdminNewDoctorComponent implements OnInit{
     this.userService.addUser(this.user).subscribe(data => console.log(data), error => console.log(error));
     console.log(this.user);
     console.log(typeof(this.user));
- 
+    this._snackBar.open("İşleminiz Gerçekleşmiştir","Tamam", {
+      duration: 3000
+    });
 
   }
 
@@ -107,6 +110,9 @@ export class AdminNewDoctorComponent implements OnInit{
 
     this.user = new User();
     console.log(this.user);
+    this._snackBar.open("İşleminiz Gerçekleşmiştir","Tamam", {
+      duration: 3000
+    });
   }
 }
 
